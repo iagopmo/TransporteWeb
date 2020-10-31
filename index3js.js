@@ -1,15 +1,19 @@
 'use strict';
 
 $(document).ready(function () {
+  retrieveLastIdValue();
+})
+
+var lastId = localStorage.getItem("lastId");
+var solicitations = localStorage.getItem("solicitations");
+
+function retrieveLastIdValue(){
   if (lastId == null) {
     lastId = 0;
   } else {
     lastId = JSON.parse(lastId);
   }
-})
-
-var lastId = localStorage.getItem("lastId");
-var solicitations = localStorage.getItem("solicitations");
+}
 
 function save() {
 
