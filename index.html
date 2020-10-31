@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="estilo.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/lumen/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iqcNtN3rj6Y1HX/R0a3zu3ngmbdwEa9qQGHdkXwSRoiE+Gj71p0UNDSm99LcXiXV" crossorigin="anonymous">
+  <title>Solicitação Transporte</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8">
+</head>
+
+<body>
+  <table class="table table-striped">
+    <caption>Cronograma</caption>
+    <thead class="thead-dark">
+      <tr>
+      <tr>
+        <th colspan="6" id="tableTitle">Cronograma para agendamento transporte</th>
+      </tr>
+      <th scope="col">Dias</th>
+      <th scope="col">SEGUNDA - FEIRA</th>
+      <th scope="col">TERÇA - FEIRA</th>
+      <th scope="col">QUARTA - FEIRA</th>
+      <th scope="col">QUINTA - FEIRA</th>
+      <th scope="col">SEXTA - FEIRA</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th rowspan="4" style="vertical-align: middle">ROTAS</th>
+      </tr>
+      <tr>
+        <td>GENERAL CARNEIRO</td>
+        <td>BR</td>
+        <td>GENERAL CARNEIRO</td>
+        <td>BR</td>
+        <td>ALVORADA E NOVO ALVORADA</td>
+      </tr>
+
+      <tr>
+        <td>N. SRA. DE FÁTIMA</td>
+        <td>PALMITAL - E. M. AFONSO MARIA</td>
+        <td>N. SRA. DE FÁTIMA</td>
+        <td>RAVENA</td>
+        <td>ANA LÚCIA</td>
+      </tr>
+
+      <tr>
+        <td>PACIÊNCIA</td>
+        <td></td>
+        <td>ROÇA GRANDE</td>
+        <td>TRAÍRAS - E. M. OROZIMBO V. ARAÚJO COSTA</td>
+        <td>POMPÉU E VILA SANTA CRUZ</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="form-group">
+    <h1 id="tituloForm">Formulário Solicitação de Transporte</h1>
+  </div>
+
+
+  <form>
+    <div class="form-group row">
+      <div class="col-md-3">
+        <label for="" id="lblDataEnvioFormulario">Data de Envio do formulario: </label>
+      </div>
+
+      <div class="col-md-3" style="display: none">
+        <input type="text" id="dataEnvioIn">
+      </div>
+    </div>
+
+    <hr class="hRow">
+    <div>
+      <h2><u>Interessado</u></h2>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md-3">
+        <label for="" id="lblNomeSolicitante">Digite seu nome:* </label>
+        <input type="text" id="nomeSolicitanteIn" class="form-control" placeholder="Nome..." autofocus>
+      </div>
+      <div class="col-md-3">
+        <label for="" id="lblSetor">Gerência:* </label>
+        <input type="text" id="setorIn" class="form-control" placeholder="Gerencia...">
+      </div>
+    </div>
+    <hr class="hRow">
+    <div>
+      <h2><u>Rota</u></h2>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md-3">
+        <label for="" id="lblDestino">Destino*</label>
+        <input type="text" list="escolas" id="escolasIn" class="form-control" placeholder="Destino...">
+        <datalist id="escolas">
+          <option value="Adão de Fátima Pereira">
+          <option value="Afonso Maria da Silva">
+          <option value="Aníbal Machado">
+          <option value="Bernardinho Augusto Ferreira">
+          <option value="Construtor Joaquim Borges">
+          <option value="Gabriela Leite Araújo">
+          <option value="Geraldo Dias Assunção">
+          <option value="Geraldo dos Santos">
+          <option value="Gerson Manoel dos Anjos">
+          <option value="José Rodrigues da Silva">
+          <option value="Jules Pauly">
+          <option value="Maria Célia Freitas">
+          <option value="Ordália Ferreira Campos">
+          <option value="Orozimbo Vaz de Araújo Costa">
+          <option value="Padre Geraldo de Souza">
+          <option value="Padre Sebastião Tirino">
+          <option value="Professora Augusta Azeredo">
+          <option value="Professora Elza Soares">
+          <option value="Professora Marita Dias">
+          <option value="Professora Irene Pinto">
+          <option value="Professora Rosalina A. Nogueira">
+          <option value="Professora Tina Costa">
+          <option value="Santos Dummont">
+          <option value="Vereador Geraldo A. Feitoza">
+          <option value="Vereador José Lopes">
+          <option value="Professora Maria Aparecida Batista">
+        </datalist>
+      </div>
+      <div class="col-md-3">
+        <label for="" id="lblDataVsista">Data visita* </label>
+        <input type="date" id="dataIn" class="form-control" required min="2019-01-01" max="2019-12-30"> <br>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md-3">
+        <label for="" id="lblHoraSaida">Hora saida* </label>
+        <input type="time" id="saidaIn" class="form-control" required>
+      </div>
+      <div class="col-md-3">
+        <label for="" id="lblRetorno">Hora Retorno*</label>
+        <input type="time" id="retornoIn" class="form-control" required>
+      </div>
+      <div class="col-md-3">
+        <label for="" id="lblNumPessoas">Numero de pessoas* </label>
+        <input type="number" name="" id="numPessoasIn" class="form-control" min="1" max="7" required>
+      </div>
+    </div>
+
+    <hr class="hRow">
+    <div class="form-group">
+      <h2><u>Assunto</u></h2>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md-3">
+        <label for="" id="lblProgramacao">Programação* </label>
+        <input type="text" id="programacaoIn" class="form-control" placeholder="Programação">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md-3">
+        <label for="" id="lblObservacao">Observação </label>
+        <textarea class="form-control" name="" id="observacaoArea" cols="30" rows="3" placeholder="Observação: "
+          readonly></textarea>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button id="btnEnviar" class="btn btn-primary" onclick="save()" type="button">Enviar</button>
+    </div>
+  </form>
+  <hr class="hRow">
+
+
+  <div class="form-group">
+    <ul style="font-size: 2em" id="solicitacoesList"></ul>
+  </div>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js"
+    integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
+  <script src="index3js.js"></script>
+
+</body>
+
+</html>

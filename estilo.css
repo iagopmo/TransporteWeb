@@ -1,0 +1,42 @@
+table{
+    width: 100%;
+}
+
+#tableTitle{
+    font-size: 1.5em;
+}
+
+table, th, td{
+    border: 1px solid black; 
+    border-collapse: collapse; 
+    text-align: center; 
+}
+
+th, td{
+    padding: 15px;
+}
+
+#dataEnvioIn{
+    display: none;
+}
+
+input#escolasIn{
+    /* padding: 294.250px; */
+    width: 294.250px;
+}
+
+#lblDataEnvioFormulario{
+    display: none;
+}
+
+.hRow{
+    border: #302744 solid 1px;
+    margin: 0 auto;
+}
+
+#tituloForm{
+    text-align: center;
+}
+
+
+
